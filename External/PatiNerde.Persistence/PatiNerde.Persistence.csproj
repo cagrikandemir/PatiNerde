@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contexts\" />
+    <ProjectReference Include="..\..\Core\PatiNerde.Application\PatiNerde.Application.csproj" />
   </ItemGroup>
 
 </Project>

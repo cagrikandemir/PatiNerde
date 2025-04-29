@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PatiNerde.Persistence.Contexts;
 
-namespace PatiNerde.Persistence
+namespace PatiNerde.Persistence;
+
+public static class ServiceRegistiration
 {
-    internal class ServiceRegistiration
+    public static void AddPersistenceServices(this IServiceCollection services)
     {
+        services.AddDbContext<PatiNerdeDbContext>(options => options
+        .UseSqlServer("Server=localhost;Database=PatiNerde;Trusted_Connection=True;TrustServerCertificate=True;"));
     }
 }

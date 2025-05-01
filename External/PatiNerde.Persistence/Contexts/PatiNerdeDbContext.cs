@@ -11,5 +11,6 @@ public class PatiNerdeDbContext : DbContext
     }
 
     public DbSet<AppUser> AppUsers => Set<AppUser>();
+    public DbSet<AppMapMaker> AppMapMakers => Set<AppMapMaker>();
 }
 

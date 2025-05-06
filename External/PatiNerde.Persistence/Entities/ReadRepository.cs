@@ -7,7 +7,7 @@ namespace PatiNerde.Persistence.Entities;
 
 public class ReadRepository<T, TKey> : IReadRepository<T, TKey>
     where T : BaseEntity
-    where TKey : IQueryable<TKey>
+    where TKey : IEquatable<TKey>
 {
     private readonly PatiNerdeDbContext _context;
     public ReadRepository(PatiNerdeDbContext context)

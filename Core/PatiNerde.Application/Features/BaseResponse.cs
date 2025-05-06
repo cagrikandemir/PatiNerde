@@ -1,6 +1,6 @@
 ﻿namespace PatiNerde.Application.Features;
 
-public class BaseResponse
+public class BaseResponse<TResponseDto>
 {
     public string? Code { get; set; }
     public string? Title { get; set; }

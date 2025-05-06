@@ -5,7 +5,7 @@ namespace PatiNerde.Application.Abtractions.IEntities;
 
 public interface IWriteRepository<T, TKey>
     where T : class
-    where TKey : IQueryable<TKey>
+    where TKey : IEquatable<TKey>
 {
     DbSet<T> Table { get; }
     DbContext Context { get; }

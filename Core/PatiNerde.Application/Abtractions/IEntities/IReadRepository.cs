@@ -6,7 +6,7 @@ namespace PatiNerde.Application.Abtractions.IEntities;
 
 public interface IReadRepository<T , TKey>
     where T : BaseEntity
-    where TKey: IQueryable<TKey>
+    where TKey: IEquatable<TKey>
 {
     DbSet<T> Table { get; }
 

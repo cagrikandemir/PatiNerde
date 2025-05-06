@@ -8,7 +8,7 @@ namespace PatiNerde.Persistence.Entities;
 
 public class WriteRepository<T, TKey> : IWriteRepository<T, TKey>
     where T : BaseEntity
-    where TKey : IQueryable<TKey>
+    where TKey : IEquatable<TKey>
 {
     private readonly PatiNerdeDbContext _context;
 

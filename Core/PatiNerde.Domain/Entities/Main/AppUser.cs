@@ -20,8 +20,6 @@ namespace PatiNerde.Domain.Entities.Main
         public string PasswordSalt { get; set; }
         [MaxLength(20)]
         public required string Phone { get; set; }
-        [MaxLength(128)]
-        public required string Address { get; set; }
         [MaxLength(50)]
         public required string City { get; set; }
         public bool IsActive { get; set; }

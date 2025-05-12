@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PatiNerde.Application.Abtractions.IEntities.IMain;
+using PatiNerde.Domain.Entities.Main;
+using PatiNerde.Persistence.Contexts;
 
-namespace PatiNerde.Persistence.Entities.Main
+namespace PatiNerde.Persistence.Entities.Main;
+
+public class AppUserWrite : WriteRepository<AppUser, int> ,IAppUserWrite
 {
-    internal class AppUserWrite
+    public AppUserWrite(PatiNerdeDbContext context) : base(context)
     {
     }
 }

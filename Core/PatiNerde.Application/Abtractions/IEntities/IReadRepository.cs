@@ -14,7 +14,7 @@ public interface IReadRepository<T , TKey>
 
     public IQueryable<T> GetAll();
 
-    public Task<T> FindByIdAsync(TKey Id);
+    public Task<T?> FindByIdAsync(TKey Id);
 
     public Task<ICollection<T>> FindListByIdAsync(TKey Id);
 

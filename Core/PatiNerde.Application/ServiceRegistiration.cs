@@ -10,7 +10,6 @@ public static class ServiceRegistiration
         services.AddScoped<IAppUserWrite, AppUserWrite>();
         services.AddScoped<IAppUserRead, AppUserRead>();
 
-
     }
 
 }

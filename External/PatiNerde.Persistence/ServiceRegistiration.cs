@@ -11,4 +11,5 @@ public static class ServiceRegistiration
         services.AddDbContext<PatiNerdeDbContext>(options => options
         .UseSqlServer("Server=localhost;Database=PatiNerde;Trusted_Connection=True;TrustServerCertificate=True;"));
     }
+
 }

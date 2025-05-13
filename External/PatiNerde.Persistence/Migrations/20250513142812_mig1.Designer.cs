@@ -12,7 +12,7 @@ using PatiNerde.Persistence.Contexts;
 namespace PatiNerde.Persistence.Migrations
 {
     [DbContext(typeof(PatiNerdeDbContext))]
-    [Migration("20250501212100_mig1")]
+    [Migration("20250513142812_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
@@ -74,11 +74,6 @@ namespace PatiNerde.Persistence.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasMaxLength(128)
-                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("City")
                         .IsRequired()

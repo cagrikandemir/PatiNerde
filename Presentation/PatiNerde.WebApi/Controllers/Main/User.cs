@@ -14,9 +14,14 @@ public class User : ControllerBase
     {
         _mediator = mediator;
     }
-    [HttpPost]
+    [HttpPost("[action]")]
     public async Task<IActionResult> Register([FromBody] AppUserRegisterRequest request)
     {
-        return Ok (await _mediator.Send(request));
+        return Ok(await _mediator.Send(request));
     }
+    //[HttpPost("[action]")]
+    //public async Task<IActionResult> Register([FromBody] AppUserRegisterRequest request)
+    //{
+    //    return Ok(await _scMediator.Send<AppUserRegisterRequest, AppUserRegisterResponse>(request));
+    //}
 }

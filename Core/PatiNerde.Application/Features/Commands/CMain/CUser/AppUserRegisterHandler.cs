@@ -20,7 +20,7 @@ public class AppUserRegisterHandler : IRequestHandler<AppUserRegisterRequest, Ba
             AppUser? user= await _userService.FindByNickOrEmailAsync(request.NickName, request.Email);
             if(user == null)
             {
-                user =await _userService.CreateAsync(request.NickName, request.Name, request.SurName, request.Email, request.Password, request.Phone.ToString(), request.City);
+                user =await _userService.CreateAsync(request.NickName, request.Name, request.SurName, request.Email, request.Password, request.Phone, request.City);
                 if (user != null)
                 {
                     response.Code = "200";
@@ -43,8 +43,7 @@ public class AppUserRegisterHandler : IRequestHandler<AppUserRegisterRequest, Ba
         }
         catch (Exception ex)
         {
-
-           response.Title=ex.Message;
+            response.Title = ex.InnerException?.Message ?? ex.Message;
         }
         return response;
     } 

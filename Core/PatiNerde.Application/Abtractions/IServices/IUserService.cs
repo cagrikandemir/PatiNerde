@@ -11,7 +11,7 @@ public interface IUserService
     Task<AppUser?> FindByNickOrEmailAsync(string userName, string email);
 
     Task<AppUser?> CreateAsync(AppUser user);
-    Task<AppUser?> CreateAsync(string NickName, string Name, string SurName,string Email,string Password,string Phone,string City);
+    Task<AppUser?> CreateAsync(string NickName, string Name, string SurName,string Email,string Password,int Phone,string City);
 
     Task<bool>UpdateAsync(AppUser user);
 

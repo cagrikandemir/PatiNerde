@@ -21,7 +21,7 @@ public class UserService : IUserService
         await _tableWrite.SaveAsync();
         return user;
     }
-    public async Task<AppUser?>CreateAsync(string NickName, string Name, string SurName, string Email, string Password, string Phone, string City)
+    public async Task<AppUser?>CreateAsync(string NickName, string Name, string SurName, string Email, string Password, int Phone, string City)
     {
         AppUser user = new()
         {

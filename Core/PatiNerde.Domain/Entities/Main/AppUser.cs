@@ -16,13 +16,13 @@ namespace PatiNerde.Domain.Entities.Main
         public required string Email { get; set; }
         [MaxLength(50)]
         public required string Password { get; set; }
-        [MaxLength(128)]
-        public string PasswordSalt { get; set; }
+        //[MaxLength(128)]
+        //public string PasswordSalt { get; set; }
         [MaxLength(20)]
-        public required string Phone { get; set; }
+        public required int Phone { get; set; }
         [MaxLength(50)]
         public required string City { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         public ICollection<AppMapMaker>? AppMapMakers { get; set; }
 

@@ -12,7 +12,7 @@ using PatiNerde.Persistence.Contexts;
 namespace PatiNerde.Persistence.Migrations
 {
     [DbContext(typeof(PatiNerdeDbContext))]
-    [Migration("20250513142812_mig1")]
+    [Migration("20250514105605_mig1")]
     partial class mig1
     {
         /// <inheritdoc />
@@ -114,10 +114,9 @@ namespace PatiNerde.Persistence.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("nvarchar(128)");
 
-                    b.Property<string>("Phone")
-                        .IsRequired()
+                    b.Property<int>("Phone")
                         .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasColumnType("int");
 
                     b.Property<string>("SurName")
                         .IsRequired()

@@ -14,6 +14,7 @@ public class AppUserRegisterHandler : IRequestHandler<AppUserRegisterRequest, Ba
     public async Task<BaseResponse<AppUserRegisterResponse>> Handle(AppUserRegisterRequest request, CancellationToken cancellationToken)
     {
         AppUserRegisterResponse response = new();
+        response.Items=new List<AppUserRegisterResponse>();
 
         try
         {

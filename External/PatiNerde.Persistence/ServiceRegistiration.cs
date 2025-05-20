@@ -24,6 +24,8 @@ public static class ServiceRegistiration
         services.AddScoped(typeof(IWriteRepository<,>), typeof(WriteRepository<,>));
         services.AddScoped<IAppUserRead, AppUserRead>();
         services.AddScoped<IAppUserWrite, AppUserWrite>();
+        services.AddScoped<IAppMapMakerRead, AppMapMakerRead>();
+        services.AddScoped<IAppMapMakerWrite, AppMapMakerWrite>();
 
         services.AddScoped<IUserService, UserService>();
 

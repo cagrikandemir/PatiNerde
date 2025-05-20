@@ -16,6 +16,6 @@ public class AppMapMaker : BaseEntity
     public required float Enlem { get; set; }
     public required float Boylam { get; set; }
     public bool IsActive { get; set; }
-    public AppUser? AppUser { get; set; }
+    public ICollection<AppUser>? AppUser { get; set; }
 
 }

@@ -1,6 +1,8 @@
-﻿namespace PatiNerde.Domain.Entities;
+﻿using PatiNerde.Domain.Abtractions.Entities;
 
-public class BaseEntity
+namespace PatiNerde.Domain.Entities;
+
+public class BaseEntity : IBaseEntity
 {
     public DateTime? CreationTime { get; set; }
     public DateTime? ModifiyTime { get; set; }

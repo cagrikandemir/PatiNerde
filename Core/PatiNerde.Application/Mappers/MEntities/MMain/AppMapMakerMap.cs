@@ -1,5 +1,15 @@
-﻿namespace PatiNerde.Application.Mappers.MEntities.MMain;
+﻿using AutoMapper;
+using PatiNerde.Application.Features.Commands.CMain.CMapMarker;
+using PatiNerde.Domain.Entities.Main;
 
-public class AppMapMakerMap
+namespace PatiNerde.Application.Mappers.MEntities.MMain;
+
+public class AppMapMakerMap: Profile
 {
+    public AppMapMakerMap()
+    {
+        CreateMap<AppMapMaker, AppMapMarkerResponse>();
+
+        CreateMap<AppMapMarkerRequest, AppMapMaker>();
+    }
 }

@@ -10,7 +10,9 @@ public static class ServiceRegistiration
     public static void AddApplicationServices(this IServiceCollection services)
     {    
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppUserRegisterHandler).Assembly));
-        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerHandler).Assembly));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerAddHandler).Assembly));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerRemoveHandler).Assembly));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerUpdateHandler).Assembly));
 
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
     }

@@ -5,7 +5,7 @@ using PatiNerde.Persistence.Contexts;
 
 namespace PatiNerde.Persistence.Entities.Main;
 
-public class AppMapMakerWrite : WriteRepository<AppMapMaker, int>, IAppMapMakerWrite
+public class AppMapMakerWrite : WriteRepository<AppMapMarker, int>, IAppMapMakerWrite
 {
     public AppMapMakerWrite(PatiNerdeDbContext context) : base(context)
     {

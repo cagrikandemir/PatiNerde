@@ -17,7 +17,17 @@ namespace PatiNerde.WebApi.Controllers.Main
             _mediator = mediator;
         }
         [HttpPost("[action]")]
-        public async Task<IActionResult>Create([FromBody] AppMapMarkerRequest request)
+        public async Task<IActionResult>Create([FromBody] AppMapMarkerAddRequest request)
+        {
+            return Ok(await _mediator.Send(request));
+        }
+        [HttpDelete("[action]")]
+        public async Task<IActionResult> Delete([FromBody] AppMapMarkerRemoveRequest request)
+        {
+            return Ok(await _mediator.Send(request));
+        }
+        [HttpPut("[action]")]
+        public async Task<IActionResult>Update([FromBody] AppMapMarkerUpdateRequest request)
         {
             return Ok(await _mediator.Send(request));
         }

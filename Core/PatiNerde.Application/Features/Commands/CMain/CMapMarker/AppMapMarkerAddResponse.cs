@@ -5,7 +5,7 @@ using MediatR;
 
 namespace PatiNerde.Application.Features.Commands.CMain.CMapMarker;
 
-public class AppMapMarkerResponse : AppMapMaker
+public class AppMapMarkerAddResponse : AppMapMarker
 {
    
 

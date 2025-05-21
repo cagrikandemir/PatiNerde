@@ -30,6 +30,7 @@ public class AppUserRegisterHandler : IRequestHandler<AppUserRegisterRequest, Ba
                 }
                 else
                 {
+                    response.Code = "500";
                     response.Title = "Kayıt Başarısız";
                     return response;
 
@@ -37,6 +38,7 @@ public class AppUserRegisterHandler : IRequestHandler<AppUserRegisterRequest, Ba
             }
             else
             {
+                response.Code = "400";
                 response.Title = "Kullanıcı Zaten Var";
                 return response;
             }

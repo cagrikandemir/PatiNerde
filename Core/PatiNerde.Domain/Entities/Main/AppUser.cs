@@ -24,7 +24,7 @@ namespace PatiNerde.Domain.Entities.Main
         public required string City { get; set; }
         public bool IsActive { get; set; } = true;
 
-        public ICollection<AppMapMaker>? AppMapMakers { get; set; }
+        public ICollection<AppMapMarker>? AppMapMakers { get; set; }
 
     }
 }

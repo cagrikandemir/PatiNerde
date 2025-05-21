@@ -2,6 +2,6 @@
 
 namespace PatiNerde.Application.Abtractions.IEntities.IMain;
 
-public interface IAppMapMakerRead : IReadRepository<AppMapMaker, int>
+public interface IAppMapMakerRead : IReadRepository<AppMapMarker, int>
 {
 }

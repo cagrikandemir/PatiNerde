@@ -2,6 +2,6 @@
 
 namespace PatiNerde.Application.Abtractions.IEntities.IMain;
 
-public interface IAppMapMakerWrite : IWriteRepository<AppMapMaker, int>
+public interface IAppMapMakerWrite : IWriteRepository<AppMapMarker, int>
 {
 }

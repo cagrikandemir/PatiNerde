@@ -8,8 +8,13 @@ public class AppMapMakerMap: Profile
 {
     public AppMapMakerMap()
     {
-        CreateMap<AppMapMaker, AppMapMarkerResponse>();
+        CreateMap<AppMapMarker, AppMapMarkerAddResponse>();
+        CreateMap<AppMapMarkerAddRequest, AppMapMarker>();
 
-        CreateMap<AppMapMarkerRequest, AppMapMaker>();
+        CreateMap<AppMapMarker, AppMapMarkerRemoveResponse>();
+        CreateMap<AppMapMarkerRemoveRequest, AppMapMarker>();
+
+        CreateMap<AppMapMarker, AppMapMarkerUpdateResponse>();
+        CreateMap<AppMapMarkerUpdateRequest, AppMapMarker>();   
     }
 }

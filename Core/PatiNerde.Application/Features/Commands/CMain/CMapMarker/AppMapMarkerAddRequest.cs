@@ -5,7 +5,7 @@ using MediatR;
 
 namespace PatiNerde.Application.Features.Commands.CMain.CMapMarker;
 
-public class AppMapMarkerRequest : IRequest<BaseResponse<AppMapMarkerResponse>>
+public class AppMapMarkerAddRequest : IRequest<BaseResponse<AppMapMarkerAddResponse>>
 {
     public required string Title { get; set; }
     public string? Description { get; set; }

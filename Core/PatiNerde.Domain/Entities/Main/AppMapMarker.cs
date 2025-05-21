@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PatiNerde.Domain.Entities.Main;
 
-public class AppMapMaker : BaseEntity
+public class AppMapMarker : BaseEntity
 {
     [Key]
     public int MapMakerId { get; set; }
@@ -15,7 +15,7 @@ public class AppMapMaker : BaseEntity
     public string? Description { get; set; }
     public required float Enlem { get; set; }
     public required float Boylam { get; set; }
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
     public ICollection<AppUser>? AppUser { get; set; }
 
 }

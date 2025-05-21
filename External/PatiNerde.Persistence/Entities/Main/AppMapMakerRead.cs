@@ -4,7 +4,7 @@ using PatiNerde.Persistence.Contexts;
 
 namespace PatiNerde.Persistence.Entities.Main;
 
-public class AppMapMakerRead : ReadRepository<AppMapMaker, int>, IAppMapMakerRead
+public class AppMapMakerRead : ReadRepository<AppMapMarker, int>, IAppMapMakerRead
 {
     public AppMapMakerRead(PatiNerdeDbContext context) : base(context)
     {

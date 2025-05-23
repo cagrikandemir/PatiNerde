@@ -20,5 +20,8 @@ public class AppMapMakerMap: Profile
         
         CreateMap<AppMapMarker, AppMapMarkerGetAllResponse>();
         CreateMap<AppMapMarkerGetAllRequest, AppMapMarker>();
+
+        CreateMap<AppMapMarker, AppMapMarkerGetByIdResponse>();
+        CreateMap<AppMapMarkerGetByIdRequest, AppMapMarker>();
     }
 }

@@ -22,6 +22,11 @@ namespace PatiNerde.WebApi.Controllers.Main
         {
             return Ok(await _mediator.Send(request));
         }
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetById([FromQuery] AppMapMarkerGetByIdRequest request)
+        {
+            return Ok(await _mediator.Send(request));
+        }
         [HttpPost("[action]")]
         public async Task<IActionResult>Create([FromBody] AppMapMarkerAddRequest request)
         {

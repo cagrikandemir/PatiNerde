@@ -15,6 +15,7 @@ public static class ServiceRegistiration
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerRemoveHandler).Assembly));
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerUpdateHandler).Assembly));
         services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerGetAllHandler).Assembly));
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AppMapMarkerGetByIdHandler).Assembly));
 
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
     }

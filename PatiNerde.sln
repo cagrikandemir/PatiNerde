@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatiNerde.Persistence", "Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatiNerde.WebApi", "Presentation\PatiNerde.WebApi\PatiNerde.WebApi.csproj", "{911D766F-80B4-4DAA-B58D-7117508CB5A9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{566E2E52-F7A3-4D57-9B4A-2CAC70A85BAE}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "patinerde.frontend", "Frontend\PatiNerde.Frontend\patinerde.frontend.esproj", "{EF95BB7D-3AE8-7376-F62F-B1A665A8B637}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,12 @@ Global
 		{911D766F-80B4-4DAA-B58D-7117508CB5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{911D766F-80B4-4DAA-B58D-7117508CB5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{911D766F-80B4-4DAA-B58D-7117508CB5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF95BB7D-3AE8-7376-F62F-B1A665A8B637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF95BB7D-3AE8-7376-F62F-B1A665A8B637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF95BB7D-3AE8-7376-F62F-B1A665A8B637}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EF95BB7D-3AE8-7376-F62F-B1A665A8B637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF95BB7D-3AE8-7376-F62F-B1A665A8B637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF95BB7D-3AE8-7376-F62F-B1A665A8B637}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +65,7 @@ Global
 		{FF33B6A6-14B3-4656-92A4-61A2BBC7A0F9} = {B102339A-9DB9-4D6D-B2DC-0F3644B12794}
 		{8E12061D-060C-4565-934E-18D744620EAC} = {B102339A-9DB9-4D6D-B2DC-0F3644B12794}
 		{911D766F-80B4-4DAA-B58D-7117508CB5A9} = {8B6506C3-AFB0-46A3-8F6D-AE0D8E63C325}
+		{EF95BB7D-3AE8-7376-F62F-B1A665A8B637} = {566E2E52-F7A3-4D57-9B4A-2CAC70A85BAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11C2E27F-01F2-4FA8-85A2-FDA1ED8B4B34}

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PatiNerde.Application.Features.Commands.CMain.CMapMarker;
+using PatiNerde.Application.Features.Queries.QMain.QMapMarker;
 
 namespace PatiNerde.WebApi.Controllers.Main
 {
@@ -15,6 +16,11 @@ namespace PatiNerde.WebApi.Controllers.Main
         public MapMaker(IMediator mediator)
         {
             _mediator = mediator;
+        }
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetAll([FromQuery] AppMapMarkerGetAllRequest request )
+        {
+            return Ok(await _mediator.Send(request));
         }
         [HttpPost("[action]")]
         public async Task<IActionResult>Create([FromBody] AppMapMarkerAddRequest request)

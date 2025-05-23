@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using PatiNerde.Application.Features.Commands.CMain.CMapMarker;
+using PatiNerde.Application.Features.Queries.QMain.QMapMarker;
 using PatiNerde.Domain.Entities.Main;
 
 namespace PatiNerde.Application.Mappers.MEntities.MMain;
@@ -15,6 +16,9 @@ public class AppMapMakerMap: Profile
         CreateMap<AppMapMarkerRemoveRequest, AppMapMarker>();
 
         CreateMap<AppMapMarker, AppMapMarkerUpdateResponse>();
-        CreateMap<AppMapMarkerUpdateRequest, AppMapMarker>();   
+        CreateMap<AppMapMarkerUpdateRequest, AppMapMarker>();
+        
+        CreateMap<AppMapMarker, AppMapMarkerGetAllResponse>();
+        CreateMap<AppMapMarkerGetAllRequest, AppMapMarker>();
     }
 }

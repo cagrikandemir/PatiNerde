@@ -2,6 +2,16 @@
 using PatiNerde.Application;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:64443") // React projenin çalıştığı port
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // İsteğe bağlı: çerez veya kimlik doğrulama gerekiyorsa
+    });
+});
 builder.Services.AddPersistenceServices();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -11,6 +21,7 @@ builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -19,8 +30,11 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "PatiNerde.WebApi v1");
     });
 }
+app.UseCors("AllowReactApp");
+app.UseAuthorization();
 
 app.MapControllers();
+
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();

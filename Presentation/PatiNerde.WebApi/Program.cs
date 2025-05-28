@@ -6,7 +6,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:64443") // React projenin çalıştığı port
+        policy.WithOrigins("http://localhost:3000") // React projenin çalıştığı port
               .AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials(); // İsteğe bağlı: çerez veya kimlik doğrulama gerekiyorsa
